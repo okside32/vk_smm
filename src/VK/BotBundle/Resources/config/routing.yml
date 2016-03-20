@@ -1,0 +1,3 @@
+bot_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: BotBundle:Default:index }
