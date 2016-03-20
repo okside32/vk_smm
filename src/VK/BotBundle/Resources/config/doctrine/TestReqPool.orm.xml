@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="VK\BotBundle\Entity\TestReqPool" table="test_req_pool">
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="loadMod" type="string" column="load_mod" length="10" nullable="false"/>
+    <field name="poolSize" type="integer" column="pool_size" nullable="false"/>
+    <field name="minReqTime" type="float" column="min_req_time" precision="10" scale="0" nullable="false"/>
+    <field name="maxReqTime" type="float" column="max_req_time" precision="10" scale="0" nullable="false"/>
+    <field name="sumTime" type="float" column="sum_time" precision="10" scale="0" nullable="false"/>
+    <field name="avgTime" type="float" column="avg_time" precision="10" scale="0" nullable="false"/>
+    <field name="medianTime" type="float" column="median_time" precision="10" scale="0" nullable="false"/>
+    <field name="badReqCount" type="float" column="bad_req_count" precision="10" scale="0" nullable="false"/>
+  </entity>
+</doctrine-mapping>

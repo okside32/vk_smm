@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="VK\BotBundle\Entity\DotaBuffQueueLvl2" table="dota_buff_queue_lvl2">
+    <id name="id" type="bigint" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="parentUrl" type="string" column="parent_url" length="300" nullable="false"/>
+    <field name="childUrl" type="string" column="child_url" length="300" nullable="false"/>
+    <field name="dateCreate" type="datetime" column="date_create" nullable="false"/>
+    <field name="status" type="string" column="status" nullable="false"/>
+    <field name="workerPid" type="smallint" column="worker_pid" nullable="false"/>
+    <field name="workerStart" type="datetime" column="worker_start" nullable="true"/>
+    <field name="workerFinish" type="datetime" column="worker_finish" nullable="true"/>
+    <field name="rank" type="string" column="rank" nullable="true"/>
+    <field name="ligueName" type="string" column="ligue_name" length="200" nullable="true"/>
+  </entity>
+</doctrine-mapping>

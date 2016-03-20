@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="VK\BotBundle\Entity\HttpHeaders" table="http_headers">
+    <indexes>
+      <index name="headers__UserAgentindex" columns="user_agent"/>
+      <index name="headers__Langue_index" columns="language"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="language" type="string" column="language" length="100" nullable="true"/>
+    <field name="host" type="string" column="host" length="200" nullable="true"/>
+    <field name="referer" type="string" column="referer" length="200" nullable="true"/>
+    <field name="dnt" type="boolean" column="dnt" nullable="true"/>
+    <field name="userAgent" type="string" column="user_agent" length="300" nullable="true"/>
+  </entity>
+</doctrine-mapping>

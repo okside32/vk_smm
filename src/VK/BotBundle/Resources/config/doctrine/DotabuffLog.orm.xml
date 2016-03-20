@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="VK\BotBundle\Entity\DotabuffLog" table="dotabuff_log">
+    <id name="id" type="smallint" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="risingDate" type="datetime" column="rising_date" nullable="false"/>
+    <field name="info" type="string" column="info" length="255" nullable="false"/>
+    <field name="logType" type="string" column="log_type" length="20" nullable="true"/>
+    <field name="source" type="string" column="source" length="50" nullable="true"/>
+  </entity>
+</doctrine-mapping>

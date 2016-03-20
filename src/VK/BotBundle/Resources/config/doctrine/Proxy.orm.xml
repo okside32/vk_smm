@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="VK\BotBundle\Entity\Proxy" table="proxy">
+    <unique-constraints>
+      <unique-constraint name="uniq_addr" columns="ip,port"/>
+    </unique-constraints>
+    <id name="id" type="bigint" column="id">
+      <generator strategy="IDENTITY"/>
+    </id>
+    <field name="ip" type="string" column="ip" length="25" nullable="true"/>
+    <field name="port" type="string" column="port" length="5" nullable="true"/>
+    <field name="availability" type="boolean" column="availability" nullable="true"/>
+    <field name="checkingdate" type="datetime" column="checkingDate" nullable="false"/>
+  </entity>
+</doctrine-mapping>
